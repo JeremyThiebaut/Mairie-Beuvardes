@@ -1,0 +1,25 @@
+.navbar {
+  background-color: #293439;
+  height: 4rem;
+  width: 100svw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & nav {
+    display: flex;
+    height: 100%;
+
+    & a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      padding: 0 1rem;
+
+      &:first-child {
+        background-color: #f1c40e;
+      }
+    }
+  }
+}
