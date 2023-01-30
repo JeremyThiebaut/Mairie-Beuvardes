@@ -3,7 +3,7 @@ import styles from "./style.module.scss"
 import logo from "../../public/logo-beuvardes-bleu.png"
 import Link from "next/link"
 
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <>
             <div className={styles.header}>

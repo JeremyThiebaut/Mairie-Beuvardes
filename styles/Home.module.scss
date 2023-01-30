@@ -1,0 +1,20 @@
+.home {
+  height: 100svh;
+
+  &__container {
+    display: flex;
+    height: calc(100% - 4rem);
+  }
+
+  &__left {
+    height: 100%;
+    width: 75%;
+    background-color: #e5ebef;
+  }
+
+  &__right {
+    height: 100%;
+    width: 25%;
+    background-color: #dae0e4;
+  }
+}

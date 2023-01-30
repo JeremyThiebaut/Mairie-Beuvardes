@@ -1,7 +1,7 @@
 import Link from "next/link"
 import styles from "./styles.module.scss"
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
     return (
         <>
             <div className={styles.navbar}>

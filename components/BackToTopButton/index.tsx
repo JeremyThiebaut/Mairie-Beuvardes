@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import styles from "./style.module.scss";
 
-const BackToTopButton = () => {
+const BackToTopButton: React.FC = () => {
   const [backToTopButton, setBackToTopButton] = useState(false);
 
   useEffect(() => {
