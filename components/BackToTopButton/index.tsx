@@ -14,6 +14,9 @@ const BackToTopButton: React.FC = () => {
         setBackToTopButton(false);
       }
     });
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
   }, []);
 
   const scrollUp = () => {

@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import styles from '@/styles/Home.module.scss'
-import Navbar from '@/components/Navbar';
+import Head from "next/head";
+import styles from "@/styles/Home.module.scss";
+import Navbar from "@/components/Navbar";
+import Weather from "@/components/Weather";
 
 const Home: React.FC = () => {
   return (
@@ -14,13 +15,23 @@ const Home: React.FC = () => {
       <div className={styles.home}>
         <Navbar />
         <div className={styles.home__container}>
-
-          <div className={styles.home__left}></div>
-          <div className={styles.home__right}></div>
+          <div className={styles.home__left}>
+            <div className={styles.home__left_container}>
+              <div className={styles.home__left_article}></div>
+              <div className={styles.home__left_article}></div>
+              <div className={styles.home__left_article}></div>
+              <div className={styles.home__left_article}></div>
+              <div className={styles.home__left_article}></div>
+              <div className={styles.home__left_article}></div>
+            </div>
+          </div>
+          <div className={styles.home__right}>
+            <Weather />
+          </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Home;

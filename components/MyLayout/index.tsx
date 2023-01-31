@@ -3,7 +3,6 @@ import Footer from "../Footer";
 import Header from "../Header";
 // import Navbar from "../Navbar";
 
-
 interface MyLayoutProps {
   children: React.ReactNode;
 }
@@ -14,7 +13,7 @@ const MyLayout: React.FC<MyLayoutProps> = ({ children }) => {
       <Header />
       {/* <Navbar /> */}
       {children}
-      {/* <BackToTopButton /> */}
+      <BackToTopButton />
       <Footer />
     </>
   );

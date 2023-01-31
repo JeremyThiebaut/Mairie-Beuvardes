@@ -10,6 +10,21 @@
     height: 100%;
     width: 75%;
     background-color: #e5ebef;
+
+    &_container {
+      margin: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    &_article {
+      width: 200px;
+      height: 200px;
+      background: gray;
+      border: solid 1px black;
+    }
   }
 
   &__right {

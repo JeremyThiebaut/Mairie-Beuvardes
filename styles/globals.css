@@ -52,4 +52,5 @@ table {
 
 html {
 	font-family: "Roboto";
+	/* overflow-x: hidden; */
 }
