@@ -1,0 +1,63 @@
+.weather {
+  background-image: url("https://st3.depositphotos.com/2288675/17928/i/600/depositphotos_179289734-stock-photo-thermometer-snow-sub-zero-temperature.jpg");
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 500px;
+  width: auto;
+  height: 21rem;
+  margin: auto;
+  padding: 1rem;
+  color: #fff;
+  z-index: 10;
+  text-shadow: 0 0 1px grey;
+
+  &__top {
+    &_container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 3rem;
+    }
+    &_top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &_text {
+      font-size: 1.5rem;
+    }
+    &_right {
+      font-size: 6rem;
+    }
+  }
+
+  &__bottom {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 2rem;
+    border-radius: 0.375rem;
+
+    &_container {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    &_title {
+      font-size: 1.5rem;
+      padding-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    &_text {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    &_description {
+      font-size: 1.25rem;
+    }
+  }
+}

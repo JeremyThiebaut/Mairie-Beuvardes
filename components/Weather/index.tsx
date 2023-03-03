@@ -1,27 +1,36 @@
 import React, { useState, useEffect } from "react";
 import axios, { AxiosResponse } from "axios";
+import Image from "next/image";
+import styles from './styles.module.scss'
 
 interface WeatherData {
   name: string;
   sys: {
     country: string;
   };
+  weather: {
+    icon: string;
+    description: string;
+  }[];
   main: {
     temp: number;
     humidity: number;
+    feels_like: number;
   };
+  wind: {
+    speed: number;
+  }
 }
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState<WeatherData>(
     {} as WeatherData
   );
-  // const API_KEY = process.env.OPENWEATHERMAP_API_KEY;
-  const API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=49.1402&lon=3.4892&appid=fdd0fd85aff2f0d914c2fccf930caedb`;
-
-  console.log(API_URL);
+  // const API_KEY = process.env.WEATHER_API ?? 'default_api_key';
+  const API_URL = "https://api.openweathermap.org/data/2.5/weather?q=beuvardes&units=metric&lang=fr&appid=fdd0fd85aff2f0d914c2fccf930caedb";
   const getWeather = async () => {
     const result: AxiosResponse<WeatherData> = await axios(API_URL);
+    console.log(result);
     setWeatherData(result.data);
   };
 
@@ -29,15 +38,35 @@ const Weather = () => {
     getWeather();
   }, []);
 
+  console.log(weatherData)
   return (
     <div>
       {weatherData.name && (
-        <div>
-          <p>
-            Location: {weatherData.name}, {weatherData.sys.country}
-          </p>
-          <p>Temperature: {weatherData.main.temp}°C</p>
-          <p>Humidity: {weatherData.main.humidity}%</p>
+        <div className={styles.weather}>
+          <div className={styles.weather__top_container}>
+            <div className={styles.weather__top_top}>
+              <Image src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="/" width={100} height={100} />
+              <p className={styles.weather__top_text}>{weatherData.weather[0].description}</p>
+            </div>
+            <p className={styles.weather__top_right}>{weatherData.main.temp}&#176;</p>
+          </div>
+          <div className={styles.weather__bottom}>
+            <p className={styles.weather__bottom_title}>Météo à {weatherData.name}</p>
+            <div className={styles.weather__bottom_container}>
+              <div>
+                <p className={styles.weather__bottom_description}>Ressenti</p>
+                <p className={styles.weather__bottom_text}>{weatherData.main.feels_like.toFixed(0)}&#176;</p>
+              </div>
+              <div>
+                <p className={styles.weather__bottom_description}>Humidité</p>
+                <p className={styles.weather__bottom_text}>{weatherData.main.humidity}%</p>
+              </div>
+              <div>
+                <p className={styles.weather__bottom_description}>Vent</p>
+                <p className={styles.weather__bottom_text}>{(weatherData.wind.speed * 3.6).toFixed(0)} km/h</p>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>

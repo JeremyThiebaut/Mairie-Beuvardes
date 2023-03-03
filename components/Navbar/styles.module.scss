@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 
   & nav {
     display: flex;
@@ -18,9 +19,15 @@
       text-decoration: none;
       color: #fff;
       padding: 0 1rem;
+      // transition-duration: 0.5s;
 
       &:first-child {
         background-color: #f1c40e;
+      }
+
+      &:hover {
+        background-color: #f1c40e;
+        // transition-duration: 0.3s;
       }
     }
   }
