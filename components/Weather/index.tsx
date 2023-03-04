@@ -14,6 +14,8 @@ interface WeatherData {
   }[];
   main: {
     temp: number;
+    temp_min: number;
+    temp_max: number;
     humidity: number;
     feels_like: number;
   };
@@ -30,7 +32,6 @@ const Weather = () => {
   const API_URL = "https://api.openweathermap.org/data/2.5/weather?q=beuvardes&units=metric&lang=fr&appid=fdd0fd85aff2f0d914c2fccf930caedb";
   const getWeather = async () => {
     const result: AxiosResponse<WeatherData> = await axios(API_URL);
-    console.log(result);
     setWeatherData(result.data);
   };
 
@@ -38,7 +39,6 @@ const Weather = () => {
     getWeather();
   }, []);
 
-  console.log(weatherData)
   return (
     <div>
       {weatherData.name && (
@@ -48,7 +48,13 @@ const Weather = () => {
               <Image src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="/" width={100} height={100} />
               <p className={styles.weather__top_text}>{weatherData.weather[0].description}</p>
             </div>
-            <p className={styles.weather__top_right}>{weatherData.main.temp}&#176;</p>
+            <div className={styles.weather__top_right_center}>
+              <p className={styles.weather__top_right}>{weatherData.main.temp}&#176;</p>
+              <div className={styles.weather__top_right_container}>
+                <p className={styles.weather__top_right_down}>min {weatherData.main.temp_min.toFixed(0)}&#176;</p>
+                <p className={styles.weather__top_right_down}>max {weatherData.main.temp_max.toFixed(0)}&#176;</p>
+              </div>
+            </div>
           </div>
           <div className={styles.weather__bottom}>
             <p className={styles.weather__bottom_title}>Météo à {weatherData.name}</p>
