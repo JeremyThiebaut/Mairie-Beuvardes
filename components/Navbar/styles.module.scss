@@ -27,3 +27,104 @@
     }
   }
 }
+
+// .navbar {
+//   background-color: #293439;
+//   position: sticky;
+//   top: 0;
+//   height: 4rem;
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: 100;
+
+//   & nav {
+//     display: flex;
+//     height: 100%;
+
+//     & a {
+//       display: flex;
+//       align-items: center;
+//       text-decoration: none;
+//       color: #fff;
+//       padding: 0 1rem;
+
+//       &:hover,
+//       &.active {
+//         background-color: #f1c40e;
+//       }
+//     }
+
+//     & .dropdown {
+//       position: relative;
+//       display: inline-block;
+
+//       & .dropbtn {
+//         display: flex;
+//         align-items: center;
+//         text-decoration: none;
+//         color: #fff;
+//         padding: 0 1rem;
+//         cursor: pointer;
+
+//         &:hover,
+//         &.active {
+//           background-color: #f1c40e;
+//         }
+//       }
+
+//       & .dropdownContent {
+//         display: none;
+//         position: absolute;
+//         z-index: 1;
+
+//         & a {
+//           display: block;
+//           text-decoration: none;
+//           color: #fff;
+//           padding: 0 1rem;
+//           background-color: #293439;
+
+//           &:hover,
+//           &.active {
+//             background-color: #f1c40e;
+//           }
+//         }
+
+//         & .sub-dropdownContent {
+//           display: none;
+//           position: absolute;
+//           z-index: 1;
+//           top: 0;
+//           left: 100%;
+
+//           & a {
+//             display: block;
+//             text-decoration: none;
+//             color: #fff;
+//             padding: 0 1rem;
+//             background-color: #293439;
+
+//             &:hover,
+//             &.active {
+//               background-color: #f1c40e;
+//             }
+//           }
+//         }
+//       }
+
+//       &:hover .dropdownContent {
+//         display: block;
+
+//         & .sub-dropdownContent {
+//           display: none;
+//         }
+//       }
+
+//       &:hover .sub-dropdownContent {
+//         display: block;
+//       }
+//     }
+//   }
+// }

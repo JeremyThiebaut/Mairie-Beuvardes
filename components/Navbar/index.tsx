@@ -20,3 +20,59 @@ const Navbar: React.FC = () => {
 }
 
 export default Navbar
+// import React, { useState } from "react";
+// import Link from "next/link";
+// import { useState } from "react";
+
+// type NavLinkProps = {
+//     href: string;
+//     text: string;
+// };
+
+// const NavLink: React.FC<NavLinkProps> = ({ href, text }) => {
+//     const [showSubNav, setShowSubNav] = useState(false);
+
+//     return (
+//         <li
+//             onMouseEnter={() => setShowSubNav(true)}
+//             onMouseLeave={() => setShowSubNav(false)}
+//         >
+//             <Link href={href}>
+//                 {text}
+//             </Link>
+//             {showSubNav && (
+//                 <ul>
+//                     <li>
+//                         <Link href={`${href}/sublink1`}>
+//                             Sublink 1
+//                         </Link>
+//                     </li>
+//                     <li>
+//                         <Link href={`${href}/sublink2`}>
+//                             Sublink 2
+//                         </Link>
+//                     </li>
+//                     <li>
+//                         <Link href={`${href}/sublink3`}>
+//                             Sublink 3
+//                         </Link>
+//                     </li>
+//                 </ul>
+//             )}
+//         </li>
+//     );
+// };
+
+// const Navbar: React.FC = () => {
+//     return (
+//         <nav>
+//             <ul>
+//                 <NavLink href="/" text="Link 1" />
+//                 <NavLink href="/link2" text="Link 2" />
+//                 <NavLink href="/link3" text="Link 3" />
+//             </ul>
+//         </nav>
+//     );
+// };
+
+// export default Navbar;
