@@ -29,15 +29,20 @@
 
     & .hide {
       display: none;
+
+      & a {
+        width: 100%;
+      }
     }
 
     .show {
+      height: 2rem;
       position: absolute;
       top: 4rem;
       left: calc(50% - 137px);
       background-color: #293439;
       z-index: 100;
-      padding: 0.5rem 1rem;
+      padding: 0;
     }
   }
 }
@@ -51,5 +56,20 @@
     margin: auto;
     display: flex;
     align-items: center;
+  }
+}
+
+.test {
+  padding: 0 !important;
+  height: 100%;
+
+  & div {
+    height: 100%;
+    padding: 0 !important;
+
+    & a,
+    & p {
+      padding: 0 1rem !important;
+    }
   }
 }
