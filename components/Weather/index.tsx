@@ -28,9 +28,8 @@ const Weather = () => {
   const [weatherData, setWeatherData] = useState<WeatherData>(
     {} as WeatherData
   );
-  const API_KEY = process.env.OPENWEATHERMAP_API_KEY;
+  const API_KEY = process.env.NEXT_PUBLIC_OPENWEATHERMAP_API_KEY;
   const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=beuvardes&units=metric&lang=fr&appid=${API_KEY}`;
-  console.log(API_URL);
   const getWeather = async () => {
     const result: AxiosResponse<WeatherData> = await axios(API_URL);
     setWeatherData(result.data);
