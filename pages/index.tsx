@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Weather from "@/components/Weather";
 
 const Home: React.FC = () => {
+
   return (
     <>
       <Head>
@@ -13,7 +14,8 @@ const Home: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.home}>
-        <Navbar />
+        <Navbar
+        />
         <div className={styles.home__container}>
           <div className={styles.home__left}>
             <div className={styles.home__left_container}>

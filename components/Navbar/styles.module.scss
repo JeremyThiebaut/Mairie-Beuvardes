@@ -1,75 +1,82 @@
-.navbar {
-  background-color: #293439;
-  position: sticky;
-  top: 0;
-  height: 4rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
+// .navbar {
+//   background-color: #293439;
+//   position: sticky;
+//   top: 0;
+//   height: 4rem;
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: 100;
 
-  & nav {
-    display: flex;
-    height: 100%;
+//   & nav {
+//     display: flex;
+//     height: 100%;
 
-    & a,
-    & div {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: #fff;
-      padding: 0 1rem;
-      cursor: default;
-    }
+//     & a,
+//     & div {
+//       display: flex;
+//       align-items: center;
+//       text-decoration: none;
+//       color: #fff;
+//       padding: 0 1rem;
+//       cursor: default;
+//     }
 
-    & a {
-      cursor: pointer;
-    }
+//     & a {
+//       cursor: pointer;
+//     }
 
-    & .hide {
-      display: none;
+//     & .hide {
+//       display: none;
 
-      & a {
-        width: 100%;
-      }
-    }
+//       & a {
+//         width: 100%;
+//       }
+//     }
 
-    .show {
-      height: 2rem;
-      position: absolute;
-      top: 4rem;
-      left: calc(50% - 137px);
-      background-color: #293439;
-      z-index: 100;
-      padding: 0;
-    }
-  }
-}
+//     .show {
+//       height: 2rem;
+//       position: absolute;
+//       top: 4rem;
+//       background-color: #293439;
+//       z-index: 100;
+//       padding: 0;
+//     }
 
-.active {
-  display: flex;
-  flex-direction: column;
-  background-color: #f1c40e;
+//     .home {
+//       left: calc(50% - 137px);
+//     }
 
-  & p {
-    margin: auto;
-    display: flex;
-    align-items: center;
-  }
-}
+//     .test {
+//       left: calc(50% - 51px);
+//     }
+//   }
+// }
 
-.test {
-  padding: 0 !important;
-  height: 100%;
+// .active {
+//   display: flex;
+//   flex-direction: column;
+//   background-color: #f1c40e;
 
-  & div {
-    height: 100%;
-    padding: 0 !important;
+//   & p {
+//     margin: auto;
+//     display: flex;
+//     align-items: center;
+//   }
+// }
 
-    & a,
-    & p {
-      padding: 0 1rem !important;
-    }
-  }
-}
+// .test {
+//   padding: 0 !important;
+//   height: 100%;
+
+//   & div {
+//     height: 100%;
+//     padding: 0 !important;
+
+//     & a,
+//     & p {
+//       padding: 0 1rem !important;
+//     }
+//   }
+// }
