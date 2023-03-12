@@ -80,3 +80,75 @@
 //     }
 //   }
 // }
+
+.navbar {
+  background-color: #293439;
+  position: sticky;
+  top: 0;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  & ul {
+    display: flex;
+    height: 100%;
+
+    & > li > p {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      padding: 0 1rem;
+      cursor: default;
+    }
+  }
+
+  .submenu {
+    // padding: 0 1rem 1rem;
+    padding-bottom: 1rem;
+    background-color: #293439;
+    color: #fff;
+    width: auto;
+    cursor: default;
+    position: absolute;
+
+    &__container {
+      display: flex;
+      width: 100%;
+
+      & p {
+        width: 100%;
+        padding: 0 1rem;
+      }
+    }
+
+    & a {
+      text-decoration: none;
+      color: #f0f;
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: 0 1rem;
+      // padding: 0.3rem;
+      // padding-left: 1rem;
+    }
+  }
+
+  .subsubmenu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    background-color: blue;
+    // top: -0rem;
+  }
+
+  // & nav {
+  //   display: flex;
+  //   height: 100%;
+  // }
+}
