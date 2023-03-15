@@ -1,86 +1,3 @@
-// .navbar {
-//   background-color: #293439;
-//   position: sticky;
-//   top: 0;
-//   height: 4rem;
-//   width: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   z-index: 100;
-
-//   & nav {
-//     display: flex;
-//     height: 100%;
-
-//     & a,
-//     & div {
-//       display: flex;
-//       align-items: center;
-//       text-decoration: none;
-//       color: #fff;
-//       padding: 0 1rem;
-//       cursor: default;
-//     }
-
-//     & a {
-//       cursor: pointer;
-//     }
-
-//     & .hide {
-//       display: none;
-
-//       & a {
-//         width: 100%;
-//       }
-//     }
-
-//     .show {
-//       height: 2rem;
-//       position: absolute;
-//       top: 4rem;
-//       background-color: #293439;
-//       z-index: 100;
-//       padding: 0;
-//     }
-
-//     .home {
-//       left: calc(50% - 137px);
-//     }
-
-//     .test {
-//       left: calc(50% - 51px);
-//     }
-//   }
-// }
-
-// .active {
-//   display: flex;
-//   flex-direction: column;
-//   background-color: #f1c40e;
-
-//   & p {
-//     margin: auto;
-//     display: flex;
-//     align-items: center;
-//   }
-// }
-
-// .test {
-//   padding: 0 !important;
-//   height: 100%;
-
-//   & div {
-//     height: 100%;
-//     padding: 0 !important;
-
-//     & a,
-//     & p {
-//       padding: 0 1rem !important;
-//     }
-//   }
-// }
-
 .navbar {
   background-color: #293439;
   position: sticky;
@@ -108,8 +25,7 @@
   }
 
   .submenu {
-    // padding: 0 1rem 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     background-color: #293439;
     color: #fff;
     width: auto;
@@ -120,6 +36,7 @@
       display: flex;
       width: 100%;
 
+      & > a,
       & p {
         width: 100%;
         padding: 0 1rem;
@@ -128,27 +45,27 @@
 
     & a {
       text-decoration: none;
-      color: #f0f;
-      width: 100%;
+      color: #fff;
       height: 100%;
       display: block;
-      padding: 0 1rem;
-      // padding: 0.3rem;
-      // padding-left: 1rem;
     }
   }
 
   .subsubmenu {
     display: block;
     position: absolute;
-    width: 100%;
+    width: max-content;
     left: 100%;
-    background-color: blue;
-    // top: -0rem;
+    background-color: #293439;
+    padding: 1rem 0;
+    margin-top: -1rem;
+
+    & a {
+      padding: 0 1rem;
+    }
   }
 
-  // & nav {
-  //   display: flex;
-  //   height: 100%;
-  // }
+  .active {
+    background-color: #f1c40e;
+  }
 }
