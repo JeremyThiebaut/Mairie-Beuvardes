@@ -78,3 +78,10 @@
     }
   }
 }
+
+@media screen and (max-width: 1085px) {
+  .navbar > ul {
+    margin-left: auto;
+    margin-right: 16.1rem;
+  }
+}
