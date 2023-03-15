@@ -68,4 +68,9 @@
   .active {
     background-color: #f1c40e;
   }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
 }

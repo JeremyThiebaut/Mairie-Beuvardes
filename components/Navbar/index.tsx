@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./styles.module.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+
 type SubMenu = {
   text: string;
   url?: string;
@@ -244,11 +247,16 @@ const Navbar = () => {
                         }}
                         className={
                           subMenuState[`text${index * 2 + subMenuIndex + 1}`]
-                            ? styles.active
-                            : ""
+                            ? styles.row + " " + styles.active
+                            : styles.row
                         }
                       >
                         {subMenu.text}
+                        <FontAwesomeIcon
+                          className={styles.contact__left_icon}
+                          icon={faCaretRight}
+                          aria-hidden="true"
+                        />
                       </p>
                     )}
                     {subMenuState[`text${index * 2 + subMenuIndex + 1}`] && (
