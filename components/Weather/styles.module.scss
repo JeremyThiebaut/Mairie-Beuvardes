@@ -74,3 +74,72 @@
     }
   }
 }
+
+@media screen and (max-width: 1450px) {
+  .weather {
+    height: 16rem;
+
+    &__bottom {
+      &_title {
+        font-size: 1rem;
+      }
+      &_description {
+        font-size: 1rem;
+      }
+      &_text {
+        font-size: 1rem;
+        padding-top: 0.5rem;
+      }
+    }
+    &__top {
+      &_top img {
+        width: 4em;
+        height: auto;
+      }
+      &_right {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .weather {
+    height: 12rem;
+
+    &__bottom {
+      padding: 1rem;
+      &_title {
+        font-size: 1rem;
+      }
+      &_description {
+        font-size: 0.8rem;
+      }
+      &_text {
+        font-size: 0.8rem;
+        padding-top: 0.5rem;
+      }
+    }
+    &__top {
+      &_text {
+        font-size: 1rem;
+      }
+      &_top {
+        & img {
+          width: 4em;
+          height: auto;
+        }
+      }
+      &_right {
+        font-size: 2rem;
+        &_container {
+          font-size: 1rem;
+          width: auto;
+        }
+        &_center {
+          width: 5rem;
+        }
+      }
+    }
+  }
+}
