@@ -67,27 +67,6 @@ const Navbar = () => {
             { text: "Petit journal", url: "/petitJournal" },
           ],
         },
-        {
-          text: "Bulletins municipaux",
-          subSubMenus: [
-            { text: "Petit beuvardois", url: "/petitBeuvardois" },
-            { text: "Petit journal", url: "/petitJournal" },
-          ],
-        },
-        {
-          text: "Bulletins municipaux",
-          subSubMenus: [
-            { text: "Petit beuvardois", url: "/petitBeuvardois" },
-            { text: "Petit journal", url: "/petitJournal" },
-          ],
-        },
-        {
-          text: "Bulletins municipaux",
-          subSubMenus: [
-            { text: "Petit beuvardois", url: "/petitBeuvardois" },
-            { text: "Petit journal", url: "/petitJournal" },
-          ],
-        },
       ],
     },
     {

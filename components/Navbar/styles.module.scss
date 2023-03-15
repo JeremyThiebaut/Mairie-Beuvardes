@@ -72,5 +72,9 @@
   .row {
     display: flex;
     justify-content: space-between;
+
+    & svg {
+      padding-left: 0.5rem;
+    }
   }
 }
