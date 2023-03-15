@@ -1,10 +1,9 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.scss";
-import Navbar from "@/components/Navbar";
 import Weather from "@/components/Weather";
+import Footer from "../components/Footer";
 
 const Home: React.FC = () => {
-
   return (
     <>
       <Head>
@@ -14,8 +13,6 @@ const Home: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.home}>
-        <Navbar
-        />
         <div className={styles.home__container}>
           <div className={styles.home__left}>
             <div className={styles.home__left_container}>
@@ -32,6 +29,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
