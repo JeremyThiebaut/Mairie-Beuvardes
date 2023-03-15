@@ -1,16 +1,18 @@
 .home {
-  height: calc(100svh - 4rem);
+  height: 100svh;
+  min-height: 100svh;
+  // overflow: auto;
 
   &__container {
     display: flex;
-    height: 100%;
+    min-height: 100svh;
   }
 
   &__left {
-    height: 100%;
+    // height: 100%;
     width: 75%;
     background-color: #e5ebef;
-    overflow: auto;
+    // overflow: auto;
 
     &_container {
       margin: 1rem;
@@ -29,7 +31,7 @@
   }
 
   &__right {
-    height: 100%;
+    // height: 100%;
     width: 25%;
     background-color: #dae0e4;
   }
